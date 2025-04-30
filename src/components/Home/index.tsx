@@ -6,6 +6,7 @@ import { Row, Col, Pagination } from "antd";
 import Post from "../Post/Post";
 import { IPost } from "../../interfaces/post.interface";
 import Loading from "../shared-components/Loading/Loading";
+import AudioUpload from '../shared-components/audio'
 
 const Home = () => {
   const [searchValue, setSearchValue] = useState<string>("");
@@ -42,6 +43,7 @@ const Home = () => {
 
   return (
     <div className="mx-10">
+      <AudioUpload />
       <Row justify={"space-between"} className="my-6">
         <Col xs={24} sm={8}>
           <SearchInput onSearch={handleSearchValue} />
